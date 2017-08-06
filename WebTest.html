@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0021)http://192.168.0.202/ -->
+<html lang='en'>
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+    <title>Sonoff Wifi with MQTT</title>
+    <link rel='stylesheet' href='https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css'>
+</head>
+<body>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-sm-12 col-md-8 col-lg-6'>
+                <form id='configform'>
+                    <h1>Sonoff Wifi and MQTT Setup</h1>
+                    <fieldset>
+                        <legend>Wifi</legend>
+                        <div class='input-group fluid'>
+                            <label for='SSID' style='width: 80px;'>Wifi SSID</label>
+                            <input id='SSID' name='SSID' value='Mr.Cupcake' placeholder='Wifi SSID'>
+                        </div>
+                        <div class='input-group fluid'>
+                            <label for='WifiPassword' style='width: 80px;'>Password</label>
+                            <input id='WifiPassword' name='WifiPass' value='D0uglas123'>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>MQTT</legend>
+                        <div class='input-group fluid'>
+                            <label for='Broker' style='width: 80px;'>Broker IP</label>
+                            <input id='Broker' name='Broker' value='Mr.Cupcake' placeholder='MQTT Broker IP Address'>
+                        </div>
+                        <div class='input-group fluid'>
+                            <label for='MQTTUser' style='width: 80px;'>User Name</label>
+                            <input id='MQTTUser' name='MQTTUser' value='D0uglas123' placeholder='MQTT User Name'>
+                        </div>
+                        <div class='input-group fluid'>
+                            <label for='MQTTPassword' style='width: 80px;'>Password</label>
+                            <input id='MQTTPassword' name='MQTTPassword' value='D0uglas123' placeholder='MQTT Password'>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Device</legend>
+                        <div class='input-group fluid'>
+                            <label for='DeviceID' style='width: 80px;'>Device ID</label>
+                            <input id='DeviceID' name='DeviceID' value='Mr.Cupcake' placeholder='Device ID'>
+                        </div>
+                        <div class='input-group fluid'>
+                            <label for='Room' style='width: 80px;'>Room</label>
+                            <input id='Room' name='Room' value='D0uglas123' placeholder='Room'>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class='input-group fluid'>
+                            <button type='submit' onclick='' form='configform'>Save and restart</button>
+                            <button type='submit' onclick='' form='switchform'>Turn On</button>
+                        </div>
+                    </fieldset>
+                </form>
+                <form class='hidden' id='switchform' name='switchform' action='WebTest.html/state'>
+                    <input type='hidden' name='switch' value='ON'>
+                </form>
+            </div>
+            <div class='col-sm'>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
